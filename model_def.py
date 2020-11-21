@@ -15,9 +15,32 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
-from sklearn.svm import SVC
-from sklearn.ensemble import RandomForestClassifier
 
+'''
+myModel
+	
+	__init__(self, df, to_process, target)
+	df: input data (pandas dataframe)
+	to_process: text column to process (string)
+	target: target column (string)
+	=> return: None
+
+	process_words(self, text)
+	text: text to be processed {remove stop words, lemmatize} (string)
+	=> return: processed text (string)
+
+	train(self)
+	train the model
+	=> return: None
+
+	predict(self, data)
+	data: text for which sentiment is required (string)
+	=> return: dict (keys=status,value)
+
+	dump()
+	dump the trained model as model.rd
+	=> return: None
+'''
 class myModel:	
 	def __init__(self, df, to_process, target):	
 		self.to_process = to_process
@@ -43,6 +66,7 @@ class myModel:
 		self.train_score = self.model.score(X_train,y_train)
 		self.test_score = self.model.score(X_test,y_test)
 	def predict(self,data):	
+		#remove special characters and convert to lower case
 		text = self.process_words(re.sub(r"[^a-zA-Z0-9]+", " ", data).lower())
 		if len(text)!=0:	
 			return {'status':True,'value':int(self.model.predict([text])[0])}
