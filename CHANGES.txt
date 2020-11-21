@@ -2,3 +2,14 @@
 ---
 
 - Initial version.
+
+1.0
+---
+
+- Added: 
+                  - data/yelp.csv
+                  - Screenshots
+                  - model.rd
+                  - model_def.py
+                  - train_routine.py
+                  - my_app/templates/main.jinja2
