@@ -53,4 +53,9 @@ Added in v1.0
     1) get inside my_app
     2) execute python3 train_routine.py <training_data_file_name> <text_column> <target_column>
 
+- NOTE:
+
+    python version 3.6 may throw an exception => AttributeError: module 'enum' has no attribute 'IntFlag'
+    Uninstall enum34: pip3 uninstall -y enum34
+    More on this error: https://stackoverflow.com/questions/43124775/why-python-3-6-1-throws-attributeerror-module-enum-has-no-attribute-intflag
 
