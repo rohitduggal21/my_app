@@ -28,3 +28,29 @@ Getting Started
 - Run your project.
 
     env/bin/pserve development.ini
+
+Added in v1.0
+---------------
+- data
+
+    folder for training data files
+
+-  Screenshots
+
+    screenshots demonstrating the working of the app
+
+-  model.rd
+
+    trained model dumped by trained_routine.py
+
+- model_def.py
+
+    module containing the class which handles the training part
+
+- train_routine.py
+
+    module for training a model, intructions for training the model:
+    1) get inside my_app
+    2) execute python3 train_routine.py <training_data_file_name> <text_column> <target_column>
+
+
