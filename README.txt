@@ -37,7 +37,7 @@ Added in v1.0
 
 -  Screenshots
 
-    screenshots demonstrating the working of the app
+    screenshots/demo demonstrating the working of the app
 
 -  model.rd
 
