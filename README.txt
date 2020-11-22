@@ -1,4 +1,4 @@
-my_app
+my_app (Sentiment Analysis App)
 ======
 
 Getting Started
